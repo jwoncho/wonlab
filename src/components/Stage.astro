@@ -1,0 +1,25 @@
+---
+// src/components/Stage.astro
+---
+<div class="stage">
+  <div class="stage-inner">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .stage {
+    perspective: 1200px;
+    perspective-origin: 50% 50%;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  .stage-inner {
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+</style>
