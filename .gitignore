@@ -1,45 +1,24 @@
-# Astro
+# build output
 dist/
+# generated types
 .astro/
 
-# Node
+# dependencies
 node_modules/
+
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-.pnpm-store/
 
-# Env
+
+# environment variables
 .env
-.env.*
-!.env.example
+.env.production
 
-# Python / FastAPI
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-.Python
-.venv/
-venv/
-*.egg-info/
-dist-info/
-
-# SQLite
-*.db
-*.sqlite
-*.sqlite3
-
-# Uploads (photos stored at runtime, not in git)
-uploads/
-
-# OS
+# macOS-specific files
 .DS_Store
-Thumbs.db
 
-# Editor
-.vscode/
+# jetbrains setting folder
 .idea/
-*.swp
-*.swo
