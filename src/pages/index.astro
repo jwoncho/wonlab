@@ -1,14 +1,30 @@
 ---
 import '../styles/global.css';
+import Stage from '../components/Stage.astro';
+import Panel from '../components/Panel.astro';
+import MobileFallback from '../components/MobileFallback.astro';
 ---
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jaewon Cho — Engineer & Photographer" />
     <title>Wonlab</title>
   </head>
   <body>
-    <p>Wonlab skeleton</p>
+    <!-- Desktop: 3D spatial layout (hidden below 768px) -->
+    <div class="hidden md:block">
+      <Stage>
+        <Panel variant="hero" label="Hero" />
+        <Panel variant="photography" label="Photography" />
+        <Panel variant="devroom" label="Dev Room" />
+      </Stage>
+    </div>
+
+    <!-- Mobile: branded fallback (shown below 768px) -->
+    <div class="block md:hidden">
+      <MobileFallback />
+    </div>
   </body>
 </html>
