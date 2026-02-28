@@ -1,0 +1,13 @@
+services:
+  wonlab-api:
+    build: ./backend
+    container_name: wonlab-api
+    restart: unless-stopped
+    expose:
+      - "8000"
+    networks:
+      - proxy-net
+
+networks:
+  proxy-net:
+    external: true
